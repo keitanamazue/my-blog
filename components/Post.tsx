@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 
-export const Post = ({ blog }) => {
+export const Post = ({ blog }: any) => {
   return (
     <Link href={`/blog/${blog.id}`}>
       <div className="cursor-pointer pb-4 shadow-md hover:opacity-80">

@@ -1,6 +1,5 @@
 import { Footer } from '../../components/Footer'
 import { Header } from '../../components/Header'
-import { PostDetail } from '../../components/PostDetail'
 import { client } from '../../lib/client'
 
 export default function BlogId({ blog }: any) {
