@@ -27,7 +27,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 
 export const Slider = () => {
   return (
-    <div className="mx-auto max-w-4xl pt-16">
+    <div className="mx-auto max-w-6xl pt-14 lg:pt-20">
       <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
         <SwiperSlide>
           <img className="" src="/blockchain.jpg" alt="" />
