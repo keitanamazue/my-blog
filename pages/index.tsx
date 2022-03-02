@@ -28,7 +28,7 @@ const Home = ({ blog }: any) => {
 export default Home
 
 // データをテンプレートに受け渡す部分の処理を記述します
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const data = await client.get({ endpoint: 'blog' })
 
   return {
