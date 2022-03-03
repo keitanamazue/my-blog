@@ -6,7 +6,7 @@ import { client } from '../lib/client'
 
 type blogProps = {
   title: string
-  category: string | []
+  category: []
   publishedAt: string
   eyecatch: string
   body: string
@@ -21,7 +21,7 @@ const Home = ({ blog }: any) => {
       </Head>
       <Header />
 
-      <div className="mt-28 mx-auto mb-10 max-w-6xl px-8">
+      <div className="mx-auto mt-28 mb-10 max-w-6xl px-8">
         <ul className="grid grid-cols-1 gap-6 md:grid-cols-2 md:space-y-0 lg:grid-cols-3">
           {blog.map((blog: blogProps) => (
             <Post

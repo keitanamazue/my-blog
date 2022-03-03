@@ -10,9 +10,9 @@ dayjs.extend(timezone)
 
 type blogProps = {
   title: string
-  category: string | []
+  category: []
   publishedAt: string
-  eyecatch: string
+  eyecatch: string | any
   body: string
   id: string
 }
@@ -28,7 +28,7 @@ export const Post = (props: blogProps) => {
           title: props.title,
           category: props.category,
           publishedAt: props.publishedAt,
-          eyecatch: props?.eyecatch?.url,
+          eyecatch: props?.eyecatch.url,
           body: props.body,
           id: props.id,
         },
@@ -36,7 +36,7 @@ export const Post = (props: blogProps) => {
     >
       <div className="cursor-pointer rounded-md pb-4 shadow-md hover:opacity-80">
         <img
-          src={props?.eyecatch?.url}
+          src={props.eyecatch?.url?.toString()}
           className="h-40 w-full rounded-t-md object-cover"
         />
         <div className="ml-4 flex flex-col items-start pt-4">

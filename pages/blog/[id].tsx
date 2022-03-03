@@ -10,7 +10,6 @@ dayjs.extend(timezone)
 
 export default function BlogId() {
   const router = useRouter()
-  console.log(router.query.publishedAt)
 
   return (
     <div>
@@ -24,7 +23,7 @@ export default function BlogId() {
         </p>
         <p className="mt-2 text-xl font-bold">{router.query.title}</p>
         <img
-          src={router.query.eyecatch}
+          src={router.query.eyecatch?.toString()}
           className=" mt-4 h-60 w-full object-cover md:h-[400px] md:w-full"
         />
         <div
