@@ -21,10 +21,18 @@ export const Header = () => {
 
       <div className="flex gap-3">
         <Link href="https://www.linkedin.com/in/keita-namazue-b57383230/">
-          <img className="h-6 w-6 cursor-pointer " src="/linkedin.png" alt="" />
+          <a target="_blank" rel="noreferrer">
+            <img
+              className="h-6 w-6 cursor-pointer "
+              src="/linkedin.png"
+              alt=""
+            />
+          </a>
         </Link>
         <Link href="https://twitter.com/nianjiang1752">
-          <img className="h-6 w-6 cursor-pointer" src="/twitter.png" alt="" />
+          <a target="_blank" rel="noreferrer">
+            <img className="h-6 w-6 cursor-pointer" src="/twitter.png" alt="" />
+          </a>
         </Link>
       </div>
     </header>
