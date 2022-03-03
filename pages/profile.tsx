@@ -6,7 +6,13 @@ const profile = () => {
   return (
     <div>
       <Header />
-      <div className="mx-auto mt-28 mb-10 max-w-6xl px-8">
+      <div className="mx-auto mt-24 mb-10 max-w-6xl px-8 md:mt-28">
+        <h1 className=" border-b-2 text-3xl font-bold">Profile</h1>
+        <img
+          src="/keita.jpg"
+          className="mt-6 h-60 w-full object-cover md:h-[400px] md:w-full"
+          alt=""
+        />
         <h1 className="mt-6 border-l-4 border-l-black bg-yellow-100 py-2 px-5 text-2xl font-bold">
           今、何やってる?
         </h1>

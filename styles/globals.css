@@ -7,3 +7,21 @@
 body {
   font-family: 'Roboto Mono', monospace;
 }
+
+.btn:span {
+  transition: transform 0.7s;
+}
+
+.btn > span:nth-child(1) {
+  transition-delay: 70ms;
+  transform: translateY(16px) rotate(135deg);
+}
+
+.btn > span:nth-child(2) {
+  transition-delay: 0s;
+  transform: translateX(-18px) scaleX(0);
+}
+.btn > span:nth-child(3) {
+  transition-delay: 140ms;
+  transform: translateY(8px) rotate(-135deg);
+}
