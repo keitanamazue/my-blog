@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import { Header } from '../components/Header'
 import { Post } from '../components/Post'
-import { SliderPost } from '../components/SliderPost'
 import { Footer } from '../components/Footer'
 import { client } from '../lib/client'
 
@@ -22,19 +21,7 @@ const Home = ({ blog }: any) => {
       </Head>
       <Header />
 
-      {blog.map((post: blogProps, index: number) => (
-        <SliderPost
-          title={blog.title}
-          category={blog.category}
-          publishedAt={blog.publishedAt}
-          eyecatch={blog.eyecatch}
-          body={blog.body}
-          id={blog.id}
-          key={blog.id}
-        />
-      ))}
-
-      <div className="mx-auto my-10 max-w-6xl px-8">
+      <div className="mt-28 mx-auto mb-10 max-w-6xl px-8">
         <ul className="grid grid-cols-1 gap-6 md:grid-cols-2 md:space-y-0 lg:grid-cols-3">
           {blog.map((blog: blogProps) => (
             <Post
