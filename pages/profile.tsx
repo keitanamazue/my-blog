@@ -2,10 +2,11 @@ import React from 'react'
 import { Footer } from '../components/Footer'
 import { Header } from '../components/Header'
 
-const profile = () => {
+const profile = (props: any) => {
+  const { isOpen, setIsOpen } = props
   return (
     <div>
-      <Header />
+      <Header isOpen={isOpen} setIsOpen={setIsOpen} />
       <div className="mx-auto mt-24 mb-10 max-w-6xl px-8 md:mt-28">
         <h1 className=" border-b-2 text-3xl font-bold">Profile</h1>
         <img

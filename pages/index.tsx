@@ -15,8 +15,8 @@ type blogProps = {
   id: string
 }
 
-const Home = ({ blog }: any) => {
-  const [isOpen, setIsOpen] = useState<boolean>(false)
+const Home = (props: any, { blog }: any) => {
+  const { isOpen, setIsOpen } = props
 
   return (
     <div>
