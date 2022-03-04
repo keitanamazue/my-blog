@@ -28,8 +28,6 @@ export const Post = (props: blogProps) => {
           eyecatch: props?.eyecatch.url,
           body: props.body,
           id: props.id,
-          isOpen: props.isOpen,
-          setIsOpen: props.setIsOpen,
         },
       }}
     >

@@ -35,8 +35,6 @@ const Home = (props: any) => {
               body={blog.body}
               id={blog.id}
               key={blog.id}
-              isOpen={isOpen}
-              setIsOpen={setIsOpen}
             />
           ))}
         </ul>
