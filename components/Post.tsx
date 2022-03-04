@@ -1,6 +1,5 @@
 import React from 'react'
 import Link from 'next/link'
-import { useRouter } from 'next/router'
 import dayjs from 'dayjs'
 import utc from 'dayjs/plugin/utc'
 import timezone from 'dayjs/plugin/timezone'
@@ -18,8 +17,6 @@ type blogProps = {
 }
 
 export const Post = (props: blogProps) => {
-  const router = useRouter()
-
   return (
     <Link
       href={{
@@ -31,6 +28,8 @@ export const Post = (props: blogProps) => {
           eyecatch: props?.eyecatch.url,
           body: props.body,
           id: props.id,
+          isOpen: props.isOpen,
+          setIsOpen: props.setIsOpen,
         },
       }}
     >

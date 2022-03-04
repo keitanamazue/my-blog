@@ -4,6 +4,7 @@ import { Header } from '../../components/Header'
 import dayjs from 'dayjs'
 import utc from 'dayjs/plugin/utc'
 import timezone from 'dayjs/plugin/timezone'
+import { Menu } from '../../components/Menu'
 
 dayjs.extend(utc)
 dayjs.extend(timezone)

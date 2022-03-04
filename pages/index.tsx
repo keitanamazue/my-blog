@@ -4,7 +4,6 @@ import { Post } from '../components/Post'
 import { Footer } from '../components/Footer'
 import { client } from '../lib/client'
 import { Menu } from '../components/Menu'
-import { useState } from 'react'
 
 type blogProps = {
   title: string
@@ -15,8 +14,8 @@ type blogProps = {
   id: string
 }
 
-const Home = (props: any, { blog }: any) => {
-  const { isOpen, setIsOpen } = props
+const Home = (props: any) => {
+  const { isOpen, setIsOpen, blog } = props
 
   return (
     <div>
@@ -24,11 +23,10 @@ const Home = (props: any, { blog }: any) => {
         <title>keita blog</title>
       </Head>
       <Header isOpen={isOpen} setIsOpen={setIsOpen} />
-      <Menu isOpen={isOpen} setIsOpen={setIsOpen} />
 
       <div className="mx-auto mt-28 mb-10 max-w-6xl px-8">
         <ul className="grid grid-cols-1 gap-6 md:grid-cols-2 md:space-y-0 lg:grid-cols-3">
-          {blog.map((blog: blogProps) => (
+          {blog?.map((blog: blogProps) => (
             <Post
               title={blog.title}
               category={blog.category}
@@ -37,6 +35,8 @@ const Home = (props: any, { blog }: any) => {
               body={blog.body}
               id={blog.id}
               key={blog.id}
+              isOpen={isOpen}
+              setIsOpen={setIsOpen}
             />
           ))}
         </ul>
