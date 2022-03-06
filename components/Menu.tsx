@@ -1,7 +1,7 @@
-import React from 'react'
 import Link from 'next/link'
 
 export const Menu = (props: any) => {
+  // eslint-disable-next-line react/destructuring-assignment
   const { isOpen, setIsOpen } = props
   return (
     isOpen && (
@@ -25,7 +25,10 @@ export const Menu = (props: any) => {
 
         <button
           className="btn absolute top-[5px] left-[40px]"
-          onClick={() => setIsOpen(!isOpen)}
+          // eslint-disable-next-line react/jsx-handler-names
+          onClick={() => {
+            return setIsOpen(!isOpen)
+          }}
         >
           <span className="block h-1 w-8  bg-black"></span>
           <span className="block h-1 w-8 bg-black"></span>

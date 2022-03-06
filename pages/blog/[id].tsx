@@ -4,7 +4,6 @@ import { Header } from '../../components/Header'
 import dayjs from 'dayjs'
 import utc from 'dayjs/plugin/utc'
 import timezone from 'dayjs/plugin/timezone'
-import { Menu } from '../../components/Menu'
 
 dayjs.extend(utc)
 dayjs.extend(timezone)
@@ -26,9 +25,11 @@ export default function BlogId() {
         <img
           src={router.query.eyecatch?.toString()}
           className=" mt-4 h-60 w-full object-cover md:h-[400px] md:w-full"
+          alt="eyecatch"
         />
         <div
           dangerouslySetInnerHTML={{
+            // eslint-disable-next-line @typescript-eslint/naming-convention
             __html: `${router.query.body}`,
           }}
           className="mt-8 leading-7 text-gray-700"

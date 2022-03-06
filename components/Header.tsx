@@ -1,7 +1,7 @@
-import React from 'react'
 import Link from 'next/link'
 
 export const Header = (props: any) => {
+  // eslint-disable-next-line react/destructuring-assignment
   const { isOpen, setIsOpen } = props
   return (
     <header className="fixed top-0 left-0 z-50 flex w-full items-center justify-between bg-yellow-100 px-10 py-2 opacity-90">
@@ -19,7 +19,13 @@ export const Header = (props: any) => {
           <Link href="/contact">contact</Link>
         </li>
       </ul>
-      <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
+      <button
+        className="md:hidden"
+        // eslint-disable-next-line react/jsx-handler-names
+        onClick={() => {
+          return setIsOpen(!isOpen)
+        }}
+      >
         <span className="absolute top-[10px] h-1 w-8 bg-black"></span>
         <span className="absolute top-[18px] h-1 w-8 bg-black"></span>
         <span className="absolute top-[26px] h-1 w-8 bg-black"></span>

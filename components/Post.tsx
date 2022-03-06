@@ -1,4 +1,3 @@
-import React from 'react'
 import Link from 'next/link'
 import dayjs from 'dayjs'
 import utc from 'dayjs/plugin/utc'
@@ -7,7 +6,7 @@ import timezone from 'dayjs/plugin/timezone'
 dayjs.extend(utc)
 dayjs.extend(timezone)
 
-type blogProps = {
+type BlogProps = {
   title: string
   category: []
   publishedAt: string
@@ -16,7 +15,7 @@ type blogProps = {
   id: string
 }
 
-export const Post = (props: blogProps) => {
+export const Post = (props: BlogProps) => {
   return (
     <Link
       href={{
@@ -35,6 +34,7 @@ export const Post = (props: blogProps) => {
         <img
           src={props.eyecatch?.url?.toString()}
           className="h-40 w-full rounded-t-md object-cover"
+          alt="eyecatch"
         />
         <div className="ml-4 flex flex-col items-start pt-4">
           <p className="mt-2 text-sm text-gray-400">
@@ -45,14 +45,16 @@ export const Post = (props: blogProps) => {
           </p>
           <p className="text-xl font-bold">{props.title}</p>
           <div className="mt-4 flex flex-wrap gap-1">
-            {props.category.map((category: string | [], index: number) => (
-              <p
-                key={index}
-                className="rounded-full bg-red-200 py-1 px-2 text-xs text-white"
-              >
-                {category}
-              </p>
-            ))}
+            {props.category.map((category: string | [], index: number) => {
+              return (
+                <p
+                  key={index}
+                  className="rounded-full bg-red-200 py-1 px-2 text-xs text-white"
+                >
+                  {category}
+                </p>
+              )
+            })}
           </div>
         </div>
       </div>

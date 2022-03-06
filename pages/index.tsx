@@ -3,9 +3,8 @@ import { Header } from '../components/Header'
 import { Post } from '../components/Post'
 import { Footer } from '../components/Footer'
 import { client } from '../lib/client'
-import { Menu } from '../components/Menu'
 
-type blogProps = {
+type BlogProps = {
   title: string
   category: []
   publishedAt: string
@@ -14,7 +13,9 @@ type blogProps = {
   id: string
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const Home = (props: any) => {
+  // eslint-disable-next-line react/destructuring-assignment
   const { isOpen, setIsOpen, blog } = props
 
   return (
@@ -26,17 +27,19 @@ const Home = (props: any) => {
 
       <div className="mx-auto mt-28 mb-10 max-w-6xl px-8">
         <ul className="grid grid-cols-1 gap-6 md:grid-cols-2 md:space-y-0 lg:grid-cols-3">
-          {blog?.map((blog: blogProps) => (
-            <Post
-              title={blog.title}
-              category={blog.category}
-              publishedAt={blog.publishedAt}
-              eyecatch={blog.eyecatch}
-              body={blog.body}
-              id={blog.id}
-              key={blog.id}
-            />
-          ))}
+          {blog?.map((blog: BlogProps) => {
+            return (
+              <Post
+                title={blog.title}
+                category={blog.category}
+                publishedAt={blog.publishedAt}
+                eyecatch={blog.eyecatch}
+                body={blog.body}
+                id={blog.id}
+                key={blog.id}
+              />
+            )
+          })}
         </ul>
       </div>
       <Footer />
