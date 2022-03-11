@@ -1,3 +1,4 @@
+import type { NextPage } from 'next'
 import Head from 'next/head'
 import { Header } from '../components/Header'
 import { Post } from '../components/Post'
@@ -14,7 +15,7 @@ type BlogProps = {
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const Home = (props: any) => {
+const Home: NextPage = (props: any) => {
   // eslint-disable-next-line react/destructuring-assignment
   const { isOpen, setIsOpen, blog } = props
 
