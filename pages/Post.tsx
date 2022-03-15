@@ -2,6 +2,7 @@ import Link from 'next/link'
 import dayjs from 'dayjs'
 import utc from 'dayjs/plugin/utc'
 import timezone from 'dayjs/plugin/timezone'
+import { PrimaryButton } from '../components/PrimaryButton'
 
 dayjs.extend(utc)
 dayjs.extend(timezone)
@@ -46,14 +47,7 @@ export const Post = (props: BlogProps) => {
           <p className="text-xl font-bold">{props.title}</p>
           <div className="mt-4 flex flex-wrap gap-1">
             {props.category.map((category: string | [], index: number) => {
-              return (
-                <p
-                  key={index}
-                  className="rounded-full bg-red-200 py-1 px-2 text-xs text-white"
-                >
-                  {category}
-                </p>
-              )
+              return <PrimaryButton key={index} category={category} />
             })}
           </div>
         </div>

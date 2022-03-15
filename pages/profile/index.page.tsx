@@ -1,4 +1,5 @@
 import type { CustomNextPage } from 'next'
+import { SubTitle } from '../../components/SubTitle'
 import { Title } from '../../components/Title'
 import { FluidLayout } from '../Layout/FluidLayout'
 
@@ -29,18 +30,14 @@ const profile: CustomNextPage = () => {
       <ul className=" space-y-4 px-10 py-4">
         <li className="">
           <ul>
-            <li className="mt-4 border-y-4 border-yellow-100 py-2 px-5 text-2xl font-bold">
-              英語
-            </li>
+            <SubTitle text="英語" />
             <li className="ml-4 mt-4 text-xl">TOEIC L＆R 825点</li>
           </ul>
         </li>
 
         <li>
           <ul>
-            <li className="mt-4 border-y-4 border-yellow-100 py-2 px-5 text-2xl font-bold">
-              エンジニアリング
-            </li>
+            <SubTitle text="エンジニアリング" />
             <li className="ml-4 mt-4 break-all text-xl">
               <span className="mr-4 text-2xl font-bold">frontend:</span>
               HTML,CSS,JavaScript,TypeScript,React.js,Next.js,ReactNative
