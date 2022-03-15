@@ -1,8 +1,8 @@
-import type { CustomLayout } from 'next'
+import type { CustomNextPage } from 'next'
 import { Title } from '../../components/Title'
 import { FluidLayout } from '../Layout/FluidLayout'
 
-const profile: CustomLayout = () => {
+const profile: CustomNextPage = () => {
   return (
     <>
       <h1 className=" border-b-2 text-3xl font-bold">Profile</h1>

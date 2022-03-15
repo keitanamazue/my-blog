@@ -1,4 +1,4 @@
-import type { CustomLayout } from 'next'
+import type { CustomNextPage } from 'next'
 import { FluidLayout } from './Layout/FluidLayout'
 import { Post } from './Post'
 import { client } from '../lib/client'
@@ -12,7 +12,7 @@ type BlogProps = {
   id: string
 }
 
-const Home: CustomLayout = (props: any) => {
+const Home: CustomNextPage = (props: any) => {
   return (
     <ul className="grid grid-cols-1 gap-6 md:grid-cols-2 md:space-y-0 lg:grid-cols-3">
       {props.blog?.map((blog: BlogProps) => {
