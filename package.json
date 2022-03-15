@@ -15,8 +15,10 @@
     "dayjs": "^1.10.8",
     "microcms-js-sdk": "^2.0.0",
     "next": "latest",
+    "next-i18next": "^10.5.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-error-boundary": "^3.1.4",
     "swiffy-slider": "^1.4.1"
   },
   "devDependencies": {
