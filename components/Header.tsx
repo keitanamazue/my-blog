@@ -1,52 +1,44 @@
-import Link from 'next/link'
+import { useState } from 'react'
+import { Burger } from '@mantine/core'
+import GlobalMenu from './GlobalMenu'
+import { Logo } from './Logo'
+import { MediaQuery } from '@mantine/core'
+import { NavItems } from './NavItems'
+import { SNSIcon } from './SNSIcon'
 
-export const Header = (props: any) => {
-  // eslint-disable-next-line react/destructuring-assignment
-  const { isOpen, setIsOpen } = props
+type CSSObject = {
+  [key: string]: string
+}
+
+export const Header = () => {
+  const [isOpened, setIsOpened] = useState<boolean>(false)
+
+  const hidden: CSSObject = {
+    display: 'none',
+  }
+
   return (
-    <header className="fixed top-0 left-0 z-50 flex w-full items-center justify-between bg-yellow-100 px-10 py-2 opacity-90">
-      <h2 className="hidden text-3xl md:block ">
-        <Link href="/">Keitablog</Link>
-      </h2>
-      <ul className="hidden items-center  space-x-6  px-4 py-4 text-base md:flex md:space-x-10  lg:space-x-20">
-        <li className="hover:opacity-80">
-          <Link href="/profile">Profile</Link>
-        </li>
-        <li className="hover:opacity-80">
-          <Link href="/bitcoin">about blog</Link>
-        </li>
-        <li className="hover:opacity-80">
-          <Link href="/contact">contact</Link>
-        </li>
-      </ul>
-      <button
-        className="md:hidden"
-        // eslint-disable-next-line react/jsx-handler-names
-        onClick={() => {
-          return setIsOpen(!isOpen)
-        }}
-      >
-        <span className="absolute top-[10px] h-1 w-8 bg-black"></span>
-        <span className="absolute top-[18px] h-1 w-8 bg-black"></span>
-        <span className="absolute top-[26px] h-1 w-8 bg-black"></span>
-      </button>
+    <>
+      <header className="fixed top-0 left-0 z-50 flex w-full items-center justify-between bg-yellow-100 px-10 py-2 opacity-90">
+        <Logo />
+        <NavItems />
 
-      <div className="flex gap-3">
-        <Link href="https://www.linkedin.com/in/keita-namazue-b57383230/">
-          <a target="_blank" rel="noreferrer">
-            <img
-              className="h-6 w-6 cursor-pointer "
-              src="/linkedin.png"
-              alt=""
-            />
-          </a>
-        </Link>
-        <Link href="https://twitter.com/nianjiang1752">
-          <a target="_blank" rel="noreferrer">
-            <img className="h-6 w-6 cursor-pointer" src="/twitter.png" alt="" />
-          </a>
-        </Link>
-      </div>
-    </header>
+        <MediaQuery largerThan="sm" styles={hidden}>
+          <Burger
+            opened={isOpened}
+            // eslint-disable-next-line react/jsx-handler-names
+            onClick={() => {
+              return setIsOpened((o) => {
+                return !o
+              })
+            }}
+            size={30}
+          />
+        </MediaQuery>
+        <SNSIcon />
+      </header>
+
+      <GlobalMenu isOpened={isOpened} setIsOpened={setIsOpened} />
+    </>
   )
 }
