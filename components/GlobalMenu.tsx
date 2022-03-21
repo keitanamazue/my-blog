@@ -4,7 +4,6 @@
 /* eslint-disable react/jsx-handler-names */
 
 import { Drawer, Title } from '@mantine/core'
-import Link from 'next/link'
 import { useRouter } from 'next/router'
 import type { VFC } from 'react'
 
