@@ -28,9 +28,14 @@ const GlobalMenu: VFC<Props> = (props) => {
       }}
       title={
         <Title order={2}>
-          <Link href="/">
+          <a
+            onClick={() => {
+              return handleClose('/')
+            }}
+            className="cursor-pointer"
+          >
             <img src="/logo.png" alt="" />
-          </Link>
+          </a>
         </Title>
       }
       padding="xl"
@@ -45,7 +50,7 @@ const GlobalMenu: VFC<Props> = (props) => {
         <li className="hover:opacity-80">
           <a
             onClick={() => {
-              return handleClose('/')
+              return handleClose('/profile')
             }}
             className="cursor-pointer"
           >
