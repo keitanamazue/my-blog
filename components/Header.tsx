@@ -41,7 +41,7 @@ export const Header = () => {
         }
       >
         <Logo />
-        <div className="special-shadow hidden items-center rounded-full md:flex">
+        <div className="special-shadow hidden items-center rounded-full md:flex md:items-center">
           <div
             className={`${
               isDisplay ? 'p-1 px-2 md:flex md:items-center' : 'hidden'

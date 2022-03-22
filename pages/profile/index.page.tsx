@@ -13,7 +13,7 @@ const profile: CustomNextPage = () => {
         alt=""
       />
       <Title title="今何やってる？" />
-      <ul className="list-disc space-y-4 px-10 py-4">
+      <ul className="list-disc space-y-4 py-4 md:px-10">
         <li>フリーランスエンジニアとして活動中。</li>
         <li>
           web制作会社からWordPressやコーポレートサイトの保守・管理のお仕事をしています。
@@ -27,7 +27,7 @@ const profile: CustomNextPage = () => {
       </ul>
       <Title title="スキルは?" />
 
-      <ul className=" space-y-4 px-10 py-4">
+      <ul className=" space-y-4 py-4 md:px-10">
         <li className="">
           <ul>
             <SubTitle text="英語" />
@@ -54,7 +54,7 @@ const profile: CustomNextPage = () => {
         </li>
       </ul>
       <Title title="これからどうして行きたい?" />
-      <ul className=" space-y-4 px-10 py-4">
+      <ul className=" space-y-4 py-4 md:px-10">
         <li>エンジニアとして海外で働きたいと思っています。</li>
         <li>
           国は、シンガポール・オーストラリア・カナダあたりを攻めていこうと思っています。
