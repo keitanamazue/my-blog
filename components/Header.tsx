@@ -26,11 +26,9 @@ export const Header = () => {
 
   // 登録と後始末
   useEffect(() => {
-    document.addEventListener('scroll', isScrollToggle, { passive: true })
+    document.addEventListener('scroll', isScrollToggle)
     return () => {
-      document.removeEventListener('scroll', isScrollToggle, {
-        passive: true,
-      })
+      document.removeEventListener('scroll', isScrollToggle)
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
