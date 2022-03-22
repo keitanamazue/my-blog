@@ -12,7 +12,7 @@ export const SNSIcon = () => {
     },
   ]
   return (
-    <div className="flex gap-3">
+    <div className="hidden space-x-4 md:flex">
       {SNS_ICONS.map((sns, index) => {
         return (
           <Link href={sns.href} key={index}>

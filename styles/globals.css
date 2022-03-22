@@ -6,22 +6,34 @@
 
 body {
   font-family: 'Roboto Mono', monospace;
+  background-color: #f8f8f8;
 }
 
-.btn:span {
+.special-shadow {
+  box-shadow: 3px 3px 5px #e3e5ea, -3px -3px 5px #fff;
+}
+
+.sub-shadow {
+  box-shadow: 0px 1px 1px #e3e5ea, 0px -1px 1px #fff;
+}
+
+.mobile-menu__btn {
+  padding: 15px 10px;
+  background: white;
+}
+
+.mobile-menu__btn > span {
+  background-color: black;
+  width: 35px;
+  height: 2px;
+  display: block;
+  margin-bottom: 9px;
+  -webkit-transition: -webkit-transform 0.7s;
+  transition: -webkit-transform 0.7s;
   transition: transform 0.7s;
+  transition: transform 0.7s, -webkit-transform 0.7s;
 }
 
-.btn > span:nth-child(1) {
-  transition-delay: 70ms;
-  transform: translateY(16px) rotate(135deg);
-}
-
-.btn > span:nth-child(2) {
-  transition-delay: 0s;
-  transform: translateX(-18px) scaleX(0);
-}
-.btn > span:nth-child(3) {
-  transition-delay: 140ms;
-  transform: translateY(8px) rotate(-135deg);
+.mobile-menu__btn > span:last-child {
+  margin-bottom: 0;
 }

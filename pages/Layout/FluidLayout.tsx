@@ -12,7 +12,7 @@ export const FluidLayout: CustomLayout = (page) => {
       </Head>
       {/* <Header isOpen={isOpen} setIsOpen={setIsOpen} /> */}
       <Header />
-      <main className="mx-auto mt-28 mb-10 max-w-6xl px-8">
+      <main className="mx-auto mt-16 mb-10 px-2 md:mt-28 md:max-w-6xl md:px-8">
         <LayoutErrorBoundary>{page}</LayoutErrorBoundary>
       </main>
       <Footer />

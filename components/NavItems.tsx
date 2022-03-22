@@ -7,10 +7,10 @@ export const NavItems = () => {
     { href: '/contact', title: 'Contact' },
   ]
   return (
-    <ul className="hidden items-center  space-x-6  px-4 py-4 text-base md:flex md:space-x-10  lg:space-x-20">
+    <ul className="hidden items-center px-4 py-4 text-base md:flex   lg:space-x-10">
       {NAV_ITEMS.map((nav, index) => {
         return (
-          <li key={index} className="hover:opacity-80">
+          <li key={index}>
             <Link href={nav.href}>{nav.title}</Link>
           </li>
         )
