@@ -30,7 +30,7 @@ const BlogId: CustomNextPage = () => {
           // eslint-disable-next-line @typescript-eslint/naming-convention
           __html: `${router.query.body}`,
         }}
-        className="mt-8 leading-7 text-gray-700"
+        className="prose mt-8 leading-7 text-gray-700"
       />
     </div>
   )
